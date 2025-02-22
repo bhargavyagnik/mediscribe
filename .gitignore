@@ -1,0 +1,36 @@
+.venv
+__pycache__
+node_modules
+.env
+.next
+
+# Next.js build output
+.vercel
+out/
+
+# Dependencies
+package-lock.json
+yarn.lock
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
