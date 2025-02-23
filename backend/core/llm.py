@@ -7,10 +7,6 @@ from beeai_framework.tools.search.duckduckgo import DuckDuckGoSearchTool
 import os
 from dotenv import load_dotenv
 import asyncio
-import litellm
-
-# Turn on debug mode for litellm
-litellm._turn_on_debug()
 
 WATSONX_API_KEY = os.getenv("WATSONX_API_KEY")
 WATSONX_API_URL = os.getenv("WATSONX_URL")
