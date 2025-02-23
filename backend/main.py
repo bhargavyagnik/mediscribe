@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import appointments, conversations, doctors, llm, patients, transcribe
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI(title="Medical API", version="1.0.0")
 
 # Configure CORS
