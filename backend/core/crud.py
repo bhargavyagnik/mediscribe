@@ -139,7 +139,7 @@ def create_patient(name: str, contact: str, medical_history: str, previous_proce
 def read_patient(patient_id: str) -> Optional[Dict]:
     """Read a specific patient by ID."""
     supabase = get_supabase_client()
-    response = supabase.table("patient").select("*").eq("ID", patient_id).execute()
+    response = supabase.table("patient").select("*").eq("id", patient_id).execute()
     data = handle_error(response)
     return data[0] if data else None
 
@@ -153,13 +153,13 @@ def update_patient(patient_id: str, name: Optional[str] = None, contact: Optiona
         "medical_history": medical_history,
         "previous_procedures": previous_procedures
     }.items() if v is not None}
-    response = supabase.table("patient").update(updates).eq("ID", patient_id).execute()
+    response = supabase.table("patient").update(updates).eq("id", patient_id).execute()
     return handle_error(response)[0]
 
 def delete_patient(patient_id: str) -> Dict:
     """Delete a patient by ID."""
     supabase = get_supabase_client()
-    response = supabase.table("patient").delete().eq("ID", patient_id).execute()
+    response = supabase.table("patient").delete().eq("id", patient_id).execute()
     return handle_error(response)
 
 def get_doctor_appointments_by_date(doctor_id: str, date: str) -> List[Dict]:
@@ -196,7 +196,9 @@ def get_doctor_appointment_times(doctor_id: str, date: str) -> List[str]:
         .execute()
     
     data = handle_error(response)
-    return [appointment["time"] for appointment in data]
+    all_times = set(["9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"])
+    
+    return list(all_times - set([appointment["time"] for appointment in data]))
 
 # Example usage
 if __name__ == "__main__":

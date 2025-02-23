@@ -11,6 +11,7 @@ def transcribe_audio(file_path: str) -> str:
             model="whisper-large-v3",
             response_format="verbose_json",
         )
+        print(transcription.text)
         return transcription.text
 
 if __name__ == "__main__":

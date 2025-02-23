@@ -29,14 +29,14 @@ export function SiteHeader() {
             For Doctors
           </Link>
         </nav>
-        <div className="flex items-center ml-auto space-x-4">
+        {/* <div className="flex items-center ml-auto space-x-4">
           <Button variant="ghost" asChild>
             <Link href="/login">Login</Link>
           </Button>
           <Button asChild>
             <Link href="/register">Get Started</Link>
           </Button>
-        </div>
+        </div> */}
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden ml-2">
@@ -67,7 +67,7 @@ export function SiteHeader() {
               >
                 For Doctors
               </Link>
-              <Link
+              {/* <Link
                 href="/login"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
@@ -78,7 +78,7 @@ export function SiteHeader() {
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 Get Started
-              </Link>
+              </Link> */}
             </nav>
           </SheetContent>
         </Sheet>
