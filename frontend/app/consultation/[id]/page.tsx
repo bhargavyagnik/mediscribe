@@ -183,6 +183,7 @@ export default function ConsultationPage() {
         <div className="container py-12">
           <div className="grid gap-8">
             <div>
+              <h5>[demo: Doctor ID: DR001 assumed for now]</h5>
               <h1 className="text-3xl font-bold tracking-tight">Patient Consultation</h1>
               <p className="text-muted-foreground">
                 {patient?.name} - {appointment?.time}

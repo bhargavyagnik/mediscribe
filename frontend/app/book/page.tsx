@@ -280,7 +280,7 @@ export default function BookingPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>Discuss Your Visit</CardTitle>
-                  <CardDescription>Chat with our assistant about your condition and get preparation guidelines</CardDescription>
+                  <CardDescription>Chat with our assistant about your condition and get preparation guidelines(AI Agent grounded with Search Engine)</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div 

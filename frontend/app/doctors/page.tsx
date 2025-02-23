@@ -48,6 +48,7 @@ export default function DoctorDashboard() {
           <div className="grid gap-8">
             <div className="flex items-center justify-between">
               <div>
+              <h5>[demo: Doctor ID: DR001 assumed for now]</h5>
                 <h1 className="text-3xl font-bold tracking-tight">Doctor Dashboard</h1>
                 <p className="text-muted-foreground">Manage your appointments and patient records</p>
               </div>
