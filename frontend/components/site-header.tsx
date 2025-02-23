@@ -13,12 +13,12 @@ export function SiteHeader() {
           <span className="font-bold">MediScribe</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 ml-6">
-          <Link
+          {/* <Link
             href="/features"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
             Features
-          </Link>
+          </Link> */}
           <Link href="/book" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
             Book Appointment
           </Link>

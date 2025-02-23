@@ -41,17 +41,18 @@ export default function ConsultationPage() {
   const [referralLetter, setReferralLetter] = useState("")
   const [summary, setSummary] = useState("")
 
+  const API_BASE_URL = process.env.API_BASE_URL;
   // Fetch appointment and patient details
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true)
         const [appointmentData] = await Promise.all([
-          fetch(`http://localhost:8000/api/appointments/${appointmentId}`).then(res => res.json())
+          fetch(`${API_BASE_URL}/appointments/${appointmentId}`).then(res => res.json())
         ])
         setAppointment(appointmentData);
         const [patientData] = await Promise.all([
-          fetch(`http://localhost:8000/api/patients/${appointmentData.patient_id}`).then(res => res.json())
+          fetch(`${API_BASE_URL}/patients/${appointmentData.patient_id}`).then(res => res.json())
         ])
         setPatient(patientData);
         console.log(patientData);
