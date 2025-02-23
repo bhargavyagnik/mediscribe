@@ -41,7 +41,7 @@ export default function ConsultationPage() {
   const [referralLetter, setReferralLetter] = useState("")
   const [summary, setSummary] = useState("")
 
-  const API_BASE_URL = process.env.API_BASE_URL;
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
   // Fetch appointment and patient details
   useEffect(() => {
     const fetchData = async () => {
