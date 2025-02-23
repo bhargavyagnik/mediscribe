@@ -7,9 +7,17 @@ load_dotenv()
 app = FastAPI(title="Medical API", version="1.0.0")
 
 # Configure CORS
+origins = [
+    "https://mediscribe-git-main-bhargavyagniks-projects.vercel.app",
+    "http://localhost:3000",
+    "https://mediscribe-alpha.vercel.app",
+    "https://bhargavyagnik.com",
+    "https://mediscribe-v92j.vercel.app"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://mediscribe-git-main-bhargavyagniks-projects.vercel.app/*","http://localhost:3000/*","https://mediscribe-alpha.vercel.app/*","https://*.bhargavyagnik.com/*","https://mediscribe-v92j.vercel.app/*","https://mediscribe-v92j.vercel.app/*"],  # In production, replace with specific origins
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
